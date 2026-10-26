@@ -1,0 +1,18 @@
+.mz-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mz-space-1);
+  padding: 5px 12px;
+  border-radius: var(--mz-radius-full);
+  font-family: var(--mz-font);
+  font-size: var(--mz-text-xs);
+  font-weight: var(--mz-weight-bold);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.mz-tag--accent.mz-tag--soft { background: var(--mz-accent-soft); color: var(--mz-text); }
+.mz-tag--accent.mz-tag--solid { background: var(--mz-accent); color: var(--mz-on-accent); }
+.mz-tag--info.mz-tag--soft { background: var(--mz-info-soft); color: var(--mz-text); }
+.mz-tag--info.mz-tag--solid { background: var(--mz-info); color: var(--mz-white); }
+.mz-tag--neutral.mz-tag--soft { background: var(--mz-surface-soft); color: var(--mz-text-muted); }
+.mz-tag--neutral.mz-tag--solid { background: var(--mz-text); color: var(--mz-bg); }

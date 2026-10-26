@@ -1,0 +1,13 @@
+.mz-root {
+  font-family: var(--mz-font);
+  font-size: var(--mz-text-md);
+  line-height: var(--mz-leading-normal);
+  color: var(--mz-text);
+  background: var(--mz-bg);
+  -webkit-font-smoothing: antialiased;
+}
+.mz-root *,
+.mz-root *::before,
+.mz-root *::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,108 @@
+/*
+ * misterizii style — Langit Malam
+ * Navy malam (formal, elegan) + kuning mangga (ceria) on a clean white/mist base.
+ * Components read only the semantic tokens; raw palette tokens are for custom art.
+ */
+:root,
+.mz-root,
+.mz-light {
+  /* Palette */
+  --mz-navy-950: #0b1027;
+  --mz-navy-900: #131b3a;
+  --mz-navy-800: #1e2850;
+  --mz-navy-700: #2c3866;
+  --mz-navy-400: #8a93b4;
+  --mz-mango-500: #ffb52e;
+  --mz-mango-600: #f29f00;
+  --mz-mango-100: #fff1d4;
+  --mz-sky-500: #5b8def;
+  --mz-sky-100: #e3ecfd;
+  --mz-mist-50: #f6f8fd;
+  --mz-mist-100: #eef2fb;
+  --mz-mist-200: #dfe5f3;
+  --mz-slate-500: #5a6280;
+  --mz-white: #ffffff;
+  --mz-green-500: #22a06b;
+  --mz-red-500: #e5484d;
+
+  /* Semantic — light theme (default) */
+  --mz-bg: var(--mz-white);
+  --mz-surface: var(--mz-white);
+  --mz-surface-soft: var(--mz-mist-100);
+  --mz-border: var(--mz-mist-200);
+  --mz-text: var(--mz-navy-900);
+  --mz-text-muted: var(--mz-slate-500);
+  --mz-heading: var(--mz-navy-900);
+  --mz-accent: var(--mz-mango-500);
+  --mz-accent-hover: var(--mz-mango-600);
+  --mz-accent-soft: var(--mz-mango-100);
+  --mz-on-accent: var(--mz-navy-900);
+  --mz-info: var(--mz-sky-500);
+  --mz-info-soft: var(--mz-sky-100);
+  --mz-success: var(--mz-green-500);
+  --mz-danger: var(--mz-red-500);
+  --mz-primary: var(--mz-navy-900);
+  --mz-primary-hover: var(--mz-navy-800);
+  --mz-on-primary: var(--mz-white);
+
+  /* Typography — Plus Jakarta Sans for everything */
+  --mz-font: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mz-text-xs: 0.75rem;
+  --mz-text-sm: 0.875rem;
+  --mz-text-md: 1rem;
+  --mz-text-lg: 1.25rem;
+  --mz-text-xl: 1.5rem;
+  --mz-text-2xl: 2rem;
+  --mz-text-3xl: 2.75rem;
+  --mz-text-4xl: 3.5rem;
+  --mz-weight-regular: 400;
+  --mz-weight-medium: 500;
+  --mz-weight-bold: 700;
+  --mz-weight-black: 800;
+  --mz-leading-tight: 1.1;
+  --mz-leading-snug: 1.3;
+  --mz-leading-normal: 1.6;
+  --mz-tracking-tight: -0.02em;
+  --mz-tracking-label: 0.12em;
+
+  /* Spacing — 4px grid */
+  --mz-space-1: 4px;
+  --mz-space-2: 8px;
+  --mz-space-3: 12px;
+  --mz-space-4: 16px;
+  --mz-space-5: 20px;
+  --mz-space-6: 24px;
+  --mz-space-8: 32px;
+  --mz-space-10: 40px;
+  --mz-space-12: 48px;
+  --mz-space-16: 64px;
+
+  /* Shape */
+  --mz-radius-sm: 6px;
+  --mz-radius-md: 10px;
+  --mz-radius-lg: 16px;
+  --mz-radius-full: 999px;
+
+  /* Depth */
+  --mz-shadow-sm: 0 1px 2px rgba(19, 27, 58, 0.06);
+  --mz-shadow-md: 0 1px 2px rgba(19, 27, 58, 0.05), 0 8px 24px rgba(19, 27, 58, 0.08);
+  --mz-shadow-lg: 0 2px 4px rgba(19, 27, 58, 0.06), 0 20px 48px rgba(19, 27, 58, 0.14);
+
+  --mz-duration: 180ms;
+}
+
+/* Dark theme: navy ground. Apply with <MzProvider theme="dark"> or any element with .mz-dark. */
+.mz-dark {
+  --mz-bg: var(--mz-navy-900);
+  --mz-surface: var(--mz-navy-800);
+  --mz-surface-soft: var(--mz-navy-800);
+  --mz-border: var(--mz-navy-700);
+  --mz-text: var(--mz-white);
+  --mz-text-muted: var(--mz-navy-400);
+  --mz-heading: var(--mz-white);
+  --mz-primary: var(--mz-white);
+  --mz-primary-hover: var(--mz-mist-100);
+  --mz-on-primary: var(--mz-navy-900);
+  --mz-info-soft: rgba(91, 141, 239, 0.18);
+  --mz-accent-soft: rgba(255, 181, 46, 0.16);
+}

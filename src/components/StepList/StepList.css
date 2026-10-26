@@ -1,0 +1,18 @@
+.mz-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--mz-space-4); font-family: var(--mz-font); }
+.mz-steps__item { display: flex; gap: var(--mz-space-3); align-items: flex-start; }
+.mz-steps__num {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--mz-accent);
+  color: var(--mz-on-accent);
+  font-weight: var(--mz-weight-black);
+}
+.mz-steps--md .mz-steps__num { width: 28px; height: 28px; font-size: var(--mz-text-sm); }
+.mz-steps--lg .mz-steps__num { width: 40px; height: 40px; font-size: var(--mz-text-lg); }
+.mz-steps__content { display: flex; flex-direction: column; gap: 2px; padding-top: 2px; min-width: 0; }
+.mz-steps__title { font-weight: var(--mz-weight-bold); color: var(--mz-heading); line-height: var(--mz-leading-snug); }
+.mz-steps--lg .mz-steps__title { font-size: var(--mz-text-lg); padding-top: 6px; }
+.mz-steps__desc { font-size: var(--mz-text-sm); color: var(--mz-text-muted); line-height: var(--mz-leading-normal); }

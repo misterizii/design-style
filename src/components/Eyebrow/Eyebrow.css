@@ -1,0 +1,18 @@
+.mz-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mz-space-2);
+  font-family: var(--mz-font);
+  font-size: var(--mz-text-xs);
+  font-weight: var(--mz-weight-bold);
+  letter-spacing: var(--mz-tracking-label);
+  text-transform: uppercase;
+  color: var(--mz-text-muted);
+}
+.mz-eyebrow--accent::before {
+  content: '';
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--mz-accent);
+}

@@ -1,0 +1,21 @@
+.mz-quote {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mz-space-3);
+  padding-left: var(--mz-space-5);
+  border-left: 4px solid var(--mz-accent);
+  font-family: var(--mz-font);
+}
+.mz-quote__text {
+  margin: 0;
+  color: var(--mz-heading);
+  font-weight: var(--mz-weight-bold);
+  letter-spacing: var(--mz-tracking-tight);
+  line-height: var(--mz-leading-snug);
+}
+.mz-quote--md .mz-quote__text { font-size: var(--mz-text-lg); }
+.mz-quote--lg .mz-quote__text { font-size: var(--mz-text-2xl); line-height: var(--mz-leading-tight); }
+.mz-quote__by { display: flex; flex-direction: column; font-size: var(--mz-text-sm); }
+.mz-quote__author { font-weight: var(--mz-weight-bold); color: var(--mz-text); }
+.mz-quote__role { color: var(--mz-text-muted); }

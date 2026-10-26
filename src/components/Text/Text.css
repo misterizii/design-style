@@ -1,0 +1,10 @@
+.mz-text { margin: 0; font-family: var(--mz-font); line-height: var(--mz-leading-normal); }
+.mz-text--xs { font-size: var(--mz-text-xs); }
+.mz-text--sm { font-size: var(--mz-text-sm); }
+.mz-text--md { font-size: var(--mz-text-md); }
+.mz-text--lg { font-size: var(--mz-text-lg); }
+.mz-text--regular { font-weight: var(--mz-weight-regular); }
+.mz-text--medium { font-weight: var(--mz-weight-medium); }
+.mz-text--bold { font-weight: var(--mz-weight-bold); }
+.mz-text--default { color: var(--mz-text); }
+.mz-text--muted { color: var(--mz-text-muted); }
