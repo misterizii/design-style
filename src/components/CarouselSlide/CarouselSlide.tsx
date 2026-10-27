@@ -1,11 +1,13 @@
 import type { HTMLAttributes, ReactNode } from 'react';
-import { cx, themeClass, type Theme } from '../../utils';
+import { cx, motionClass, themeClass, type Motion, type Theme } from '../../utils';
 
 export interface CarouselSlideProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   /** `cover` = first slide (hook), `content` = one point per slide, `closing` = last slide with a call to action. */
   variant?: 'cover' | 'content' | 'closing';
   /** Defaults to `dark` for cover/closing and `light` for content. */
   theme?: Theme;
+  /** Set `static` when a frame-by-frame renderer draws this canvas (Remotion). */
+  motion?: Motion;
   /** Series or subject label at the top. */
   eyebrow?: ReactNode;
   /** Main line. Wrap the key word in <Highlight>. */
@@ -27,6 +29,7 @@ export interface CarouselSlideProps extends Omit<HTMLAttributes<HTMLDivElement>,
 export function CarouselSlide({
   variant = 'cover',
   theme,
+  motion,
   eyebrow,
   title,
   body,
@@ -41,7 +44,7 @@ export function CarouselSlide({
 }: CarouselSlideProps) {
   const t = theme ?? (variant === 'content' ? 'light' : 'dark');
   return (
-    <div className={cx('mz-root', 'mz-canvas', 'mz-carousel', `mz-carousel--${variant}`, themeClass(t), className)} {...rest}>
+    <div className={cx('mz-root', 'mz-canvas', 'mz-carousel', `mz-carousel--${variant}`, themeClass(t), motionClass(motion), className)} {...rest}>
       <div className="mz-carousel__inner">
         <div className="mz-carousel__top">
           {eyebrow ? <span className="mz-carousel__eyebrow">{eyebrow}</span> : <span />}

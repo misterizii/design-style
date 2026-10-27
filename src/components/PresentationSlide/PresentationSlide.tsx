@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react';
-import { cx, themeClass, type Theme } from '../../utils';
+import { cx, motionClass, themeClass, type Motion, type Theme } from '../../utils';
 
 export interface PresentationSlideProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   /**
@@ -11,6 +11,8 @@ export interface PresentationSlideProps extends Omit<HTMLAttributes<HTMLDivEleme
   layout?: 'title' | 'split' | 'statement' | 'content';
   /** Override the layout's default theme (title/split = dark-left, statement/content = light). */
   theme?: Theme;
+  /** Set `static` when a frame-by-frame renderer draws this canvas (Remotion). */
+  motion?: Motion;
   eyebrow?: ReactNode;
   /** Wrap the key word in <Highlight>. */
   title: ReactNode;
@@ -29,6 +31,7 @@ export interface PresentationSlideProps extends Omit<HTMLAttributes<HTMLDivEleme
 export function PresentationSlide({
   layout = 'title',
   theme,
+  motion,
   eyebrow,
   title,
   subtitle,
@@ -49,7 +52,7 @@ export function PresentationSlide({
 
   if (layout === 'split') {
     return (
-      <div className={cx('mz-root', 'mz-canvas', 'mz-slide', 'mz-slide--split', themeClass(t), className)} {...rest}>
+      <div className={cx('mz-root', 'mz-canvas', 'mz-slide', 'mz-slide--split', themeClass(t), motionClass(motion), className)} {...rest}>
         <div className="mz-slide__left mz-dark">
           {eyebrow && <span className="mz-slide__eyebrow">{eyebrow}</span>}
           <div className="mz-slide__titles">
@@ -74,7 +77,7 @@ export function PresentationSlide({
   }
 
   return (
-    <div className={cx('mz-root', 'mz-canvas', 'mz-slide', `mz-slide--${layout}`, themeClass(t), className)} {...rest}>
+    <div className={cx('mz-root', 'mz-canvas', 'mz-slide', `mz-slide--${layout}`, themeClass(t), motionClass(motion), className)} {...rest}>
       <div className="mz-slide__body">
         {eyebrow && <span className="mz-slide__eyebrow">{eyebrow}</span>}
         <div className="mz-slide__titles">

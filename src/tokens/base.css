@@ -11,3 +11,19 @@
 .mz-root *::after {
   box-sizing: border-box;
 }
+
+/*
+ * Frame-by-frame renderers (Remotion, Puppeteer, screenshot export) have no
+ * flowing clock: a CSS transition or animation either never starts or freezes
+ * at an arbitrary point, so the same frame can export differently twice.
+ * `.mz-static` switches them off; drive motion from the renderer's own frame
+ * counter instead. Set it with <MzProvider motion="static"> or motion="static"
+ * on any canvas template.
+ */
+.mz-static,
+.mz-static *,
+.mz-static *::before,
+.mz-static *::after {
+  transition: none !important;
+  animation: none !important;
+}

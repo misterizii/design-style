@@ -13,4 +13,4 @@ export * from './components/Navbar/Navbar';
 export * from './components/CarouselSlide/CarouselSlide';
 export * from './components/ReelsFrame/ReelsFrame';
 export * from './components/PresentationSlide/PresentationSlide';
-export type { Theme } from './utils';
+export type { Theme, Motion } from './utils';
