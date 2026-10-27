@@ -36,7 +36,7 @@ export function PresentationSlide({
   title,
   subtitle,
   points,
-  footer = 'misterizii',
+  footer = 'iziilearning',
   page,
   className,
   children,

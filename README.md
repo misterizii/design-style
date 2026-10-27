@@ -1,6 +1,6 @@
 # misterizii style
 
-Design system untuk semua konten edukasi misterizii: website, carousel Instagram, Reels/TikTok/Shorts, dan presentasi.
+Design system untuk semua konten edukasi iziilearning: website, carousel Instagram, Reels/TikTok/Shorts, dan presentasi.
 Tema **Langit Malam**: navy yang tenang dan elegan sebagai warna formal, kuning mangga sebagai warna ceria, di atas latar putih yang bersih.
 
 ## Warna

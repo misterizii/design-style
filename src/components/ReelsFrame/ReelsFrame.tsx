@@ -23,7 +23,7 @@ export interface ReelsFrameProps extends Omit<HTMLAttributes<HTMLDivElement>, 't
  * Vertical video frame for Reels, TikTok and Shorts, 9:16 (1080×1920).
  * Content stays inside the safe zone: clear of the bottom ~20% and the right-side buttons.
  */
-export function ReelsFrame({ theme = 'light', motion, hook, title, caption, handle = '@misterizii', showSafeArea = false, className, children, ...rest }: ReelsFrameProps) {
+export function ReelsFrame({ theme = 'light', motion, hook, title, caption, handle = '@iziilearning', showSafeArea = false, className, children, ...rest }: ReelsFrameProps) {
   return (
     <div className={cx('mz-root', 'mz-canvas', 'mz-reels', themeClass(theme), motionClass(motion), className)} {...rest}>
       <div className="mz-reels__safe">

@@ -8,7 +8,7 @@ export interface NavLink {
 }
 
 export interface NavbarProps extends HTMLAttributes<HTMLElement> {
-  /** Brand text shown on the left. Defaults to "misterizii". */
+  /** Brand text shown on the left. Defaults to "iziilearning". */
   brand?: ReactNode;
   links?: NavLink[];
   /** Right-side slot, typically a <Button>. */
@@ -16,7 +16,7 @@ export interface NavbarProps extends HTMLAttributes<HTMLElement> {
 }
 
 /** Website top bar: wordmark text, links, one action. */
-export function Navbar({ brand = 'misterizii', links = [], action, className, ...rest }: NavbarProps) {
+export function Navbar({ brand = 'iziilearning', links = [], action, className, ...rest }: NavbarProps) {
   return (
     <nav className={cx('mz-nav', className)} {...rest}>
       <span className="mz-nav__brand">{brand}</span>

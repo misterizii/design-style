@@ -38,7 +38,7 @@ export function CarouselSlide({
   cta,
   page,
   total,
-  handle = '@misterizii',
+  handle = '@iziilearning',
   className,
   ...rest
 }: CarouselSlideProps) {
